@@ -1,23 +1,24 @@
 <template>
     <nav class="nav">
         <Logo />
-        <div>About</div>
-        <div>Experience</div>
-        <div>Education</div>
-        <div>Skills</div>
-        <div>Interests</div>
-        <div>Awards</div>
+        <NavItem>About</NavItem>
+        <NavItem>Experience</NavItem>
+        <NavItem>Education</NavItem>
+        <NavItem>Skills</NavItem>
+        <NavItem>Interests</NavItem>
+        <NavItem>Awards</NavItem>
     </nav>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import Logo from '@/components/Logo.vue';
+import NavItem from '@/components/NavItem.vue';
 
 export default defineComponent({
     name: 'Nav',
     components: {
-        Logo
+        Logo, NavItem
     },
     data() {
         return {
@@ -39,10 +40,5 @@ export default defineComponent({
     justify-content: center;
     align-items: center;
     gap: 16px;
-    
-    color: rgba(255, 255, 255, 0.5);
-    font-weight: 700;
-    font-size: 18px;
-    text-transform: uppercase;
 }
 </style>
