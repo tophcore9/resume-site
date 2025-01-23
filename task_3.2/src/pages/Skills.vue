@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h1>Skills</h1>
+    <div class="page-content">
+        <h1 class="page-title__h1">Skills</h1>
     </div>
 </template>
 

@@ -1,5 +1,7 @@
 <template>
-    <h1>Interests</h1>
+    <div class="page-content">
+        <h1 class="page-title__h1">Interests</h1>
+    </div>
 </template>
 
 <script lang="ts">

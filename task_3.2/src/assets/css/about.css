@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 64px;
+  color: #888e95;
+  font-size: 18px;
+}
+
+.fullname {
+  color: #353a40;
+  font-size: 64px;
+}
+
+.marked-text {
+  color: #b16241;
+}
+
+.contact-info {
+  text-transform: uppercase;
+}
+
+.networks {
+  display: flex;
+  gap: 24px;
+}
+
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #4a5057;
+  border-radius: 50%;
+  transition: background-color 0.2s ease-out;
+}
+.img-wrapper:hover {
+  background-color: #b16241;
+}

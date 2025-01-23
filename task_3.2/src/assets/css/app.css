@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #app {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  display: flex;
+}
+
+.content {
+  padding: 64px;
+}
+
+.page-title__h1 {
+  color: #353A40;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 52px;
+  text-transform: uppercase;
+}
+
+.page-title__h2 {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31px;
+  text-transform: uppercase;
+}
+
+.page-title__h3 {
+  color: #888E95;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
