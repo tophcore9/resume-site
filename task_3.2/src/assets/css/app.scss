@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 html, body, #app {
     width: 100%;
     height: 100%;
 }
-
 #app {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
