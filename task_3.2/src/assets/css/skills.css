@@ -3,23 +3,6 @@
   gap: 24px;
 }
 
-.list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.list-item {
-  color: #888e95;
-  display: flex;
-  align-items: center;
-}
 .list-item::before {
-  content: "";
-  margin-right: 8px;
-  display: inline-block;
-  width: 16px;
-  height: 16px;
   background: url(../icons/checkmark.svg) no-repeat center;
-  background-size: cover;
 }

@@ -1,11 +1,6 @@
-.container {
-    display: flex;
-    flex-direction: column;
+.page-content {
     justify-content: center;
     gap: 64px;
-
-    color: #888e95;
-    font-size: 18px;
 }
 .fullname {
     color: #353a40;
@@ -16,6 +11,12 @@
 }
 .contact-info {
     text-transform: uppercase;
+}
+.description {
+    line-height: 24px;
+
+    color: #888e95;
+    font-size: 18px;
 }
 .networks {
     display: flex;

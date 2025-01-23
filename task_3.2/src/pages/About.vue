@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="page-content">
         <div class="contact-info">
             <h1 class="fullname">Clarence <span class="marked-text">Taylor</span></h1>
             <div class="page-title__h3">
