@@ -4,30 +4,30 @@
         <h2 class="page-title__h2">Programming languages & tools</h2>
         <div class="skills-icons">
             <IconItem
-            v-for="(skill, index) in skills"
-            :key="index"
-            :root-path="skillIconsPath"
-            :icon-name="skill"
-            :icon-format="iconsFormat"
+                v-for="(skill, index) in skills"
+                :key="index"
+                :root-path="skillIconsPath"
+                :icon-name="skill"
+                :icon-format="iconsFormat"
             />
         </div>
         <h2 class="page-title__h2">Workflow</h2>
-        <ul class="list">
-            <li class="list-item">Mobile-First, Responsive Design</li>
-            <li class="list-item">Cross Browser Testing & Debugging</li>
-            <li class="list-item">Cross Functional Teams</li>
-            <li class="list-item">Agile Development & Scrum</li>
-        </ul>
+        <List 
+        :items="workflow"
+        :checkmark-icon="checkmarkUrl"
+        />
     </div>
 </template>
 
 <script lang="ts">
 import IconItem from '@/components/IconItem.vue';
+import List from '@/components/List.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
     components: {
-        IconItem
+        IconItem,
+        List
     },
     data() {
         return {
@@ -47,7 +47,14 @@ export default defineComponent({
                 'vue',
                 'nuxt',
                 'webpack',
-                'vite'
+                'vite',
+            ],
+            checkmarkUrl: '/src/assets/icons/checkmark.svg',
+            workflow: [
+                'Mobile-First, Responsive Design',
+                'Cross Browser Testing & Debugging',
+                'Cross Functional Teams',
+                'Agile Development & Scrum'
             ]
         }
     }
@@ -55,5 +62,5 @@ export default defineComponent({
 </script>
 
 <style scoped>
-    @import url(../assets/css/skills.css);
+@import url(../assets/css/skills.css);
 </style>

@@ -1,30 +1,34 @@
 <template>
     <div class="page-content">
         <h1 class="page-title__h1">Awards & certifications</h1>
-        <ul class="list">
-            <li class="list-item">Google Analytics Certified Developer</li>
-            <li class="list-item">Mobile Web Specialist - Google Certification</li>
-            <li class="list-item">1st Place - University of Colorado Boulder - Emerging Tech Competition 2009</li>
-            <li class="list-item">1st Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)</li>
-            <li class="list-item">2nd Place - University of Colorado Boulder - Emerging Tech Competition 2008</li>
-            <li class="list-item">1st Place - James Buchanan High School - Hackathon 2006</li>
-            <li class="list-item">3rd Place - James Buchanan High School - Hackathon 2005</li>
-        </ul>
+        <List 
+        :items="awards"
+        :checkmark-icon="checkmarkUrl"
+        />
     </div>
 </template>
 
 <script lang="ts">
+import List from '@/components/List.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-    
+    components: {
+        List
+    },
+    data() {
+        return {
+            checkmarkUrl: '/src/assets/icons/award.svg',
+            awards: [
+                'Google Analytics Certified Developer',
+                'Mobile Web Specialist - Google Certification',
+                '1st Place - University of Colorado Boulder - Emerging Tech Competition 2009',
+                '1st Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)',
+                '2nd Place - University of Colorado Boulder - Emerging Tech Competition 2008',
+                '1st Place - James Buchanan High School - Hackathon 2006',
+                '3rd Place - James Buchanan High School - Hackathon 2005'
+            ]
+        }
+    }
 });
 </script>
-
-<style scoped>
-.list-item {
-    &::before {
-        background: url(../assets/icons/award.svg) no-repeat center;
-    }
-}
-</style>

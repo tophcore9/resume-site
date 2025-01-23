@@ -45,24 +45,3 @@ html, body, #app {
     flex-direction: column;
     gap: 40px;
 }
-.list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-.list-item {
-    color: #888e95;
-    display: flex;
-    align-items: center;
-
-    &::before {
-        content: '';
-        margin-right: 8px;
-
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-
-        background-size: cover;
-    }
-}
