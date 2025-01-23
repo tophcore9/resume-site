@@ -1,0 +1,26 @@
+.block {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #888e95;
+}
+
+.title-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.work-date {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #b16241;
+}
+
+.work-description {
+  font-weight: 500;
+}
