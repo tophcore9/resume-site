@@ -3,20 +3,13 @@
         <h1 class="page-title__h1">Skills</h1>
         <h2 class="page-title__h2">Programming languages & tools</h2>
         <div class="skills-icons">
-            <img src="../assets/icons/html5.svg" alt="html5" />
-            <img src="../assets/icons/css3.svg" alt="css3" />
-            <img src="../assets/icons/js.svg" alt="js" />
-            <img src="../assets/icons/jquery.svg" alt="jquery" />
-            <img src="../assets/icons/sass.svg" alt="sass" />
-            <img src="../assets/icons/less.svg" alt="less" />
-            <img src="../assets/icons/bootstrap.svg" alt="bootstrap" />
-            <img src="../assets/icons/bulma.svg" alt="bulma" />
-            <img src="../assets/icons/gulp.svg" alt="gulp" />
-            <img src="../assets/icons/npm.svg" alt="npm" />
-            <img src="../assets/icons/vue.svg" alt="vue" />
-            <img src="../assets/icons/nuxt.svg" alt="nuxt" />
-            <img src="../assets/icons/webpack.svg" alt="webpack" />
-            <img src="../assets/icons/vite.svg" alt="vite" />
+            <IconItem
+            v-for="(skill, index) in skills"
+            :key="index"
+            :root-path="skillIconsPath"
+            :icon-name="skill"
+            :icon-format="iconsFormat"
+            />
         </div>
         <h2 class="page-title__h2">Workflow</h2>
         <ul class="list">
@@ -29,9 +22,36 @@
 </template>
 
 <script lang="ts">
+import IconItem from '@/components/IconItem.vue';
 import { defineComponent } from 'vue';
 
-export default defineComponent({});
+export default defineComponent({
+    components: {
+        IconItem
+    },
+    data() {
+        return {
+            skillIconsPath: '/src/assets/icons/',
+            iconsFormat: 'svg',
+            skills: [
+                'html5',
+                'css3',
+                'js',
+                'jquery',
+                'sass',
+                'less',
+                'bootstrap',
+                'bulma',
+                'gulp',
+                'npm',
+                'vue',
+                'nuxt',
+                'webpack',
+                'vite'
+            ]
+        }
+    }
+});
 </script>
 
 <style scoped>
