@@ -1,8 +1,5 @@
 .skills-icons {
   display: flex;
+  flex-flow: row wrap;
   gap: 24px;
-}
-
-.list-item::before {
-  background: url(../icons/checkmark.svg) no-repeat center;
 }

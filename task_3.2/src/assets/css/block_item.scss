@@ -22,6 +22,12 @@
 
     color: #b16241;
 }
+@media (max-width: 1000px) {
+    .work-date {
+        position: static;
+    }
+}
+
 .work-description {
     font-weight: 500;
 }

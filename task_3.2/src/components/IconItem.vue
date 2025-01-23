@@ -1,5 +1,6 @@
 <template>
     <img 
+    class="icon"
     :src="iconPath" 
     :alt="iconName" 
     />
@@ -31,3 +32,14 @@ export default defineComponent({
     },
 })
 </script>
+
+<style scoped>
+.icon {
+    max-height: 32px;
+}
+@media (max-width: 675px) {
+    .icon {
+        max-height: 24px;
+    }
+}
+</style>

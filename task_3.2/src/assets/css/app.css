@@ -24,6 +24,12 @@ html, body, #app {
   text-transform: uppercase;
 }
 
+@media (max-width: 675px) {
+  .page-title__h1 {
+    font-size: 32px;
+    line-height: normal;
+  }
+}
 .page-title__h2 {
   color: #000;
   font-size: 24px;
@@ -32,6 +38,12 @@ html, body, #app {
   text-transform: uppercase;
 }
 
+@media (max-width: 675px) {
+  .page-title__h2 {
+    font-size: 18px;
+    line-height: normal;
+  }
+}
 .page-title__h3 {
   color: #888E95;
   font-size: 18px;
@@ -40,6 +52,12 @@ html, body, #app {
   text-transform: uppercase;
 }
 
+@media (max-width: 675px) {
+  .page-title__h3 {
+    font-size: 14px;
+    line-height: normal;
+  }
+}
 .page-content {
   padding: 64px;
   max-width: 1168px;
@@ -47,4 +65,11 @@ html, body, #app {
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+
+@media (max-width: 675px) {
+  .page-content {
+    padding: 32px;
+    font-size: 14px;
+  }
 }

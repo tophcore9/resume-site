@@ -2,9 +2,21 @@
     justify-content: center;
     gap: 64px;
 }
+@media (max-width: 675px) {
+    .page-content {
+        gap: 32px;
+    }
+}
+
 .fullname {
+    margin-bottom: 8px;
     color: #353a40;
     font-size: 64px;
+}
+@media (max-width: 675px) {
+    .fullname {
+        font-size: 40px;
+    }
 }
 .marked-text {
     color: #b16241;
@@ -36,5 +48,11 @@
     
     &:hover {
         background-color: #b16241;
+    }
+}
+@media (max-width: 675px) {
+    .img-wrapper {
+        width: 40px;
+        height: 40px;
     }
 }
