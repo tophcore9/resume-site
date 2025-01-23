@@ -1,5 +1,6 @@
 <template>
     <Nav></Nav>
+    <router-view></router-view>
 </template>
 
 <script lang="ts">
@@ -32,5 +33,7 @@ html, body, #app {
 #app {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
+    
+    display: flex;
 }
 </style>

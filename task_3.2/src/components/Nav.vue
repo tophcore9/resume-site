@@ -1,12 +1,12 @@
 <template>
     <nav class="nav">
         <Logo />
-        <NavItem>About</NavItem>
-        <NavItem>Experience</NavItem>
-        <NavItem>Education</NavItem>
-        <NavItem>Skills</NavItem>
-        <NavItem>Interests</NavItem>
-        <NavItem>Awards</NavItem>
+        <NavItem value="About"></NavItem>
+        <NavItem value="Experience"></NavItem>
+        <NavItem value="Education"></NavItem>
+        <NavItem value="Skills"></NavItem>
+        <NavItem value="Interests"></NavItem>
+        <NavItem value="Awards"></NavItem>
     </nav>
 </template>
 
@@ -18,13 +18,12 @@ import NavItem from '@/components/NavItem.vue';
 export default defineComponent({
     name: 'Nav',
     components: {
-        Logo, NavItem
+        Logo,
+        NavItem,
     },
     data() {
-        return {
-
-        }
-    }
+        return {};
+    },
 });
 </script>
 
@@ -32,8 +31,8 @@ export default defineComponent({
 .nav {
     width: 300px;
     height: 100%;
-    
-    background-color: #B16241;
+
+    background-color: #b16241;
 
     display: flex;
     flex-direction: column;
