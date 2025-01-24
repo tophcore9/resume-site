@@ -1,23 +1,23 @@
 <template>
     <nav class="nav">
         <Logo @click="$router.push('/')" />
-        <NavItem v-for="(item, index) in navItems" :key="index" :value="item" :class="{}" />
+        <MenuItem v-for="(item, index) in menuItems" :key="index" :value="item" :class="{}" />
     </nav>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import Logo from '@/components/Logo.vue';
-import NavItem from '@/components/MenuItem.vue';
+import MenuItem from '@/components/MenuItem.vue';
 
 export default defineComponent({
     name: 'Nav',
     components: {
         Logo,
-        NavItem,
+        MenuItem,
     },
     props: {
-        navItems: {
+        menuItems: {
             type: Array<string>,
             required: true,
         },

@@ -1,6 +1,6 @@
 <template>
-    <Nav :nav-items="menuItems"></Nav>
-    <BurgerMenu :nav-items="menuItems"/>
+    <Nav :menu-items="menuItems"></Nav>
+    <BurgerMenu :menu-items="menuItems"/>
     <Transition>
         <router-view class="content"></router-view>
     </Transition>

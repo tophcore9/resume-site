@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="link" :class="{ 'nav-item-active': isOpened}" @click="onClick" class="nav-item">
+    <router-link :to="link" :class="{ 'menu-item-active': isOpened}" @click="onClick" class="menu-item">
         {{ value }}
     </router-link>
 </template>
@@ -8,6 +8,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
+    name: 'MenuItem',
     data() {
         return {
             link: '/' + this.value.toLowerCase(),
@@ -35,5 +36,5 @@ export default defineComponent({
 </script>
 
 <style scoped>
-    @import url(../assets/css/nav__item.css);
+    @import url(../assets/css/menu__item.css);
 </style>
