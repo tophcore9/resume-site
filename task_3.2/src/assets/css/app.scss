@@ -71,6 +71,8 @@ html, body, #app {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    
+    overflow: scroll;
 }
 @media (max-width: 675px) {
     .page-content {

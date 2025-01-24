@@ -7,10 +7,10 @@
         </div>
         <div class="menu-items" v-if="isExpanded == true">
             <NavItem 
-            v-for="(item, index) in navItems"
-            :key="index"
-            :value="item"
-            @click="isExpanded = false"
+            v-for="(item, index) in navItems" 
+            :key="index" 
+            :value="item" 
+            @click="isExpanded = false" 
             />
         </div>
     </div>
