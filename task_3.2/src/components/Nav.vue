@@ -1,6 +1,6 @@
 <template>
     <nav class="nav">
-        <Logo />
+        <Logo @click="$router.push('/')"/>
         <NavItem 
         v-for="(item, index) in navItems"
         :key="index"

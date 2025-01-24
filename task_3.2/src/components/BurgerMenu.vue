@@ -1,7 +1,7 @@
 <template>
     <div class="burger-menu">
         <div class="header-part">
-            <img src="../assets/icons/mini-logo.svg" alt="logo" />
+            <img src="../assets/icons/mini-logo.svg" alt="logo" @click="$router.push('/')"/>
             <button class="more-button" v-if="!isExpanded" @click="isExpanded = true"></button>
             <button class="less-button" v-if="isExpanded" @click="isExpanded = false"></button>
         </div>
