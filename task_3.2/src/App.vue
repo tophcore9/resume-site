@@ -1,7 +1,9 @@
 <template>
     <Nav :nav-items="menuItems"></Nav>
     <BurgerMenu :nav-items="menuItems"/>
-    <router-view class="content"></router-view>
+    <Transition>
+        <router-view class="content"></router-view>
+    </Transition>
 </template>
 
 <script lang="ts">

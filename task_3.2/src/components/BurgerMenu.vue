@@ -1,18 +1,20 @@
 <template>
     <div class="burger-menu">
         <div class="header-part">
-            <img src="../assets/icons/mini-logo.svg" alt="logo" @click="$router.push('/')"/>
+            <img src="../assets/icons/mini-logo.svg" alt="logo" @click="$router.push('/')" />
             <button class="more-button" v-if="!isExpanded" @click="isExpanded = true"></button>
             <button class="less-button" v-if="isExpanded" @click="isExpanded = false"></button>
         </div>
-        <div class="menu-items" v-if="isExpanded == true">
-            <NavItem 
-            v-for="(item, index) in navItems" 
-            :key="index" 
-            :value="item" 
-            @click="isExpanded = false"
-            />
-        </div>
+        <Transition v-show="isExpanded == true">
+            <div class="menu-items">
+                <NavItem 
+                v-for="(item, index) in navItems"
+                :key="index"
+                :value="item"
+                @click="isExpanded = false"
+                />
+            </div>
+        </Transition>
     </div>
 </template>
 
@@ -39,59 +41,5 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.burger-menu {
-    display: none;
-
-    position: fixed;
-    z-index: 1;
-
-    width: 100%;
-    min-height: 70px;
-
-    background-color: #b16241;
-}
-@media (max-width: 600px) {
-    .burger-menu {
-        display: block;
-    }
-}
-
-.header-part {
-    padding: 0 16px;
-
-    width: 100%;
-    height: 70px;
-
-    box-shadow: 0 4px 4px 0 rgba(16, 24, 40, 0.1);
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu-items {
-    padding: 16px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.more-button {
-    width: 24px;
-    height: 24px;
-
-    border: none;
-
-    background: url(../assets/icons/burger-menu.svg);
-}
-
-.less-button {
-    width: 24px;
-    height: 24px;
-
-    border: none;
-
-    background: url(../assets/icons/close-button.svg);
-}
+@import url(../assets/css/burger_menu.css);
 </style>
