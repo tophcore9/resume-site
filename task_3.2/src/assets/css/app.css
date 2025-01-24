@@ -16,6 +16,11 @@ html, body, #app {
   display: flex;
 }
 
+@media (max-width: 600px) {
+  #app {
+    flex-direction: column;
+  }
+}
 .page-title__h1 {
   color: #353A40;
   font-size: 40px;
@@ -69,7 +74,7 @@ html, body, #app {
 
 @media (max-width: 675px) {
   .page-content {
-    padding: 32px;
+    padding: 96px 32px;
     font-size: 14px;
   }
 }

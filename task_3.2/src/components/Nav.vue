@@ -1,12 +1,12 @@
 <template>
     <nav class="nav">
         <Logo />
-        <NavItem value="About"></NavItem>
-        <NavItem value="Experience"></NavItem>
-        <NavItem value="Education"></NavItem>
-        <NavItem value="Skills"></NavItem>
-        <NavItem value="Interests"></NavItem>
-        <NavItem value="Awards"></NavItem>
+        <NavItem 
+        v-for="(item, index) in navItems"
+        :key="index"
+        :value="item"
+        />
+
     </nav>
 </template>
 
@@ -21,9 +21,12 @@ export default defineComponent({
         Logo,
         NavItem,
     },
-    data() {
-        return {};
-    },
+    props: {
+        navItems: {
+            type: Array<string>,
+            required: true
+        }
+    }
 });
 </script>
 
@@ -39,5 +42,10 @@ export default defineComponent({
     justify-content: center;
     align-items: center;
     gap: 16px;
+}
+@media (max-width: 600px) {
+    .nav {
+        display: none;
+    }
 }
 </style>
