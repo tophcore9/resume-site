@@ -34,21 +34,5 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.nav {
-    width: 300px;
-    height: 100%;
-
-    background-color: #b16241;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-}
-@media (max-width: 600px) {
-    .nav {
-        display: none;
-    }
-}
+    @import url(../assets/css/nav.css);
 </style>
