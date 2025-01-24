@@ -1,15 +1,16 @@
 <template>
     <div class="burger-menu">
         <div class="header-part">
-            <img src="../assets/icons/mini-logo.svg" alt="logo">
+            <img src="../assets/icons/mini-logo.svg" alt="logo" />
             <button class="more-button" v-if="!isExpanded" @click="isExpanded = true"></button>
             <button class="less-button" v-if="isExpanded" @click="isExpanded = false"></button>
         </div>
         <div class="menu-items" v-if="isExpanded == true">
-            <NavItem
+            <NavItem 
             v-for="(item, index) in navItems"
             :key="index"
             :value="item"
+            @click="isExpanded = false"
             />
         </div>
     </div>
@@ -21,19 +22,19 @@ import NavItem from './NavItem.vue';
 
 export default defineComponent({
     components: {
-        NavItem
+        NavItem,
     },
     data() {
         return {
-            isExpanded: false
-        }
+            isExpanded: false,
+        };
     },
     props: {
         navItems: {
             type: Array<string>,
-            required: true
-        }
-    }
+            required: true,
+        },
+    },
 });
 </script>
 
@@ -47,7 +48,7 @@ export default defineComponent({
     width: 100%;
     min-height: 70px;
 
-    background-color: #B16241;
+    background-color: #b16241;
 }
 @media (max-width: 600px) {
     .burger-menu {
@@ -79,7 +80,7 @@ export default defineComponent({
 .more-button {
     width: 24px;
     height: 24px;
-    
+
     border: none;
 
     background: url(../assets/icons/burger-menu.svg);
@@ -88,7 +89,7 @@ export default defineComponent({
 .less-button {
     width: 24px;
     height: 24px;
-    
+
     border: none;
 
     background: url(../assets/icons/close-button.svg);

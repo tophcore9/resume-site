@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="link" class="nav-item">
+    <router-link :to="link" @click="onClick" class="nav-item">
         {{ value }}
     </router-link>
 </template>
@@ -19,6 +19,11 @@ export default defineComponent({
             required: true,
         },
     },
+    methods: {
+        onClick() {
+            this.$emit('click');
+        }
+    }
 });
 </script>
 
