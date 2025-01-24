@@ -10,7 +10,7 @@
             v-for="(item, index) in navItems" 
             :key="index" 
             :value="item" 
-            @click="isExpanded = false" 
+            @click="isExpanded = false"
             />
         </div>
     </div>

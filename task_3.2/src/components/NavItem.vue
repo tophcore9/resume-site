@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="link" @click="onClick" class="nav-item">
+    <router-link :to="link" :class="{ 'nav-item-active': isOpened}" @click="onClick" class="nav-item">
         {{ value }}
     </router-link>
 </template>
@@ -22,8 +22,15 @@ export default defineComponent({
     methods: {
         onClick() {
             this.$emit('click');
-        }
-    }
+        },
+    },
+    computed: {
+        isOpened(): boolean {
+            if (this.$route.fullPath == this.link) return true;
+            
+            return false;
+        },
+    },
 });
 </script>
 

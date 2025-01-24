@@ -5,6 +5,9 @@
         v-for="(item, index) in navItems"
         :key="index"
         :value="item"
+        :class="{
+            
+        }"
         />
 
     </nav>
