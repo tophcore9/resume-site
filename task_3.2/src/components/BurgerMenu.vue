@@ -7,12 +7,7 @@
         </div>
         <Transition v-show="isExpanded == true">
             <div class="menu-items">
-                <NavItem 
-                v-for="(item, index) in navItems"
-                :key="index"
-                :value="item"
-                @click="isExpanded = false"
-                />
+                <NavItem v-for="(item, index) in navItems" :key="index" :value="item" @click="isExpanded = false" />
             </div>
         </Transition>
     </div>
@@ -20,7 +15,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import NavItem from './NavItem.vue';
+import NavItem from './MenuItem.vue';
 
 export default defineComponent({
     components: {

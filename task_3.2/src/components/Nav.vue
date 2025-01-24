@@ -1,22 +1,14 @@
 <template>
     <nav class="nav">
-        <Logo @click="$router.push('/')"/>
-        <NavItem 
-        v-for="(item, index) in navItems"
-        :key="index"
-        :value="item"
-        :class="{
-            
-        }"
-        />
-
+        <Logo @click="$router.push('/')" />
+        <NavItem v-for="(item, index) in navItems" :key="index" :value="item" :class="{}" />
     </nav>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import Logo from '@/components/Logo.vue';
-import NavItem from '@/components/NavItem.vue';
+import NavItem from '@/components/MenuItem.vue';
 
 export default defineComponent({
     name: 'Nav',
@@ -27,12 +19,12 @@ export default defineComponent({
     props: {
         navItems: {
             type: Array<string>,
-            required: true
-        }
-    }
+            required: true,
+        },
+    },
 });
 </script>
 
 <style scoped>
-    @import url(../assets/css/nav.css);
+@import url(../assets/css/nav.css);
 </style>
