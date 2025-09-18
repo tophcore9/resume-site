@@ -8,6 +8,7 @@ This is a clean and professional personal resume website. It's built with modern
 
 ### Preview
 
+https://github.com/user-attachments/assets/0c643b4d-412b-402c-b4b1-c3a3080e159f
 
 ### Installation
 
