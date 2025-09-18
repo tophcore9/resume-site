@@ -1,0 +1,15 @@
+.list-item {
+  color: #888e95;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-content: center;
+}
+
+.checkmark-icon {
+  width: 16px;
+  height: 16px;
+  justify-self: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
